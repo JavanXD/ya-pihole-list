@@ -18,3 +18,5 @@ https://justdomains.github.io/blocklists/lists/adguarddns-justdomains.txt
 https://justdomains.github.io/blocklists/lists/nocoin-justdomains.txt
 # YouTube ads
 https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt
+# Spotify ads
+https://raw.githubusercontent.com/dfederlein/dnsbl-dfed/master/spotifyads.txt
