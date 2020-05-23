@@ -11,8 +11,8 @@
 cd ~
 git clone --depth=1 https://github.com/JavanXD/ya-pihole-list.git ya-pihole-list
 cd ya-pihole-list
-sudo chmod a+x adlist-updater.sh
-sudo adlist-updater.sh
+sudo chmod a+x adlists-updater.sh
+sudo adlists-updater.sh
 ```
 
 
