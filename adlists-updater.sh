@@ -1,0 +1,76 @@
+[ -z $BASH ] && { exec bash "$0" "$@" || exit; }
+#!/usr/bin/env bash
+
+# author  : Javan Rasokat (javan.de)
+# license : gplv3
+
+basename="pihole"
+PIHOLE_COMMAND="/usr/local/bin/${basename}"
+piholeDir="/etc/${basename}"
+gravityDBfile="${piholeDir}/gravity.db"
+adListSource="https://raw.githubusercontent.com/JavanXD/ya-pihole-list/master/adlists.list.updater"
+adListFile="/home/pi/adlists.list.updater"
+tmpFile="/home/pi/adlists.list.updater.tmp"
+table="adlist"
+
+# we need to be root to have write access to gravity.db
+if [ "$EUID" -ne 0 ]
+  then echo "Warning: Please run as root"
+  exit 1
+fi
+
+# check if we're actually on a pihole (and a new version at that)
+command -v pihole >/dev/null 2>&1 || { \
+    echo >&2 "Error: You must run this on a pihole!"; exit 1; }
+
+# update raspbian
+echo "Info: Updating Raspbian"
+apt-get update && apt-get dist-upgrade -y
+
+# update pihole
+echo "Info: Updating Pi-hole"
+pihole updatePihole
+
+# update gravity table (create or migrate if not exists yet)
+echo "Info: Create or migrate gravity table if not exists yet"
+pihole updateGravity
+
+# download latest adlists list
+echo "Info: Download latest adlists list to ${adListFile}"
+curl --url ${adListSource} --output ${adListFile}
+
+# add lists to gravity db
+# Migrate list files to new database
+if [ -e "${adListFile}" ]; then
+  # Store adlist domains in database
+  echo "Info: Adding content of ${adListFile} into gravity database"
+
+  # Loop over all domains in ${adListFile} file
+  # Read file line by line
+  grep -v '^ *#' < "${adListFile}" | while IFS= read -r domain
+  do
+    # Only add non-empty lines
+    if [[ -n "${domain}" ]]; then
+      # Adlist table format
+      echo "\"${domain}\",1,${timestamp},${timestamp},\"Added by Updater\"" >> "${tmpFile}"
+      rowid+=1
+    fi
+  done
+
+  # Store domains in database table specified by ${table}
+  # Use printf as .mode and .import need to be on separate lines
+  # see https://unix.stackexchange.com/a/445615/83260
+  output=$( { printf ".timeout 30000\\n.mode csv\\n.import \"%s\" %s\\n" "${tmpFile}" "${table}" | sqlite3 "${gravityDBfile}"; } 2>&1 )
+  status="$?"
+
+  # clear file
+  echo -n "" > ${tmpFile}
+
+  if [[ "${status}" -ne 0 ]]; then
+    echo "Warning: Some warnings in table ${table} in database ${gravityDBfile}\\n  ${output}"
+  fi
+fi
+
+# update gravity table (activate the changes to the gravity.db)
+echo "Info: Update Gravity because of the changes to the gravity.db"
+pihole updateGravity

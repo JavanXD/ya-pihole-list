@@ -1,0 +1,20 @@
+# mobile in-app ads (android, iOS)
+https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/mobile.txt
+# SmartTVs Ads (HbbTV und co.)
+https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/smarttv.txt
+# Adobe Updates (Photoshop & co.)
+https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/adobeblock.txt
+# Nintendo System-Updates (3DS/Wii U/Switch)
+https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/nintendoblock.txt
+# windows microsoft tracking
+https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/nomsdata.txt
+# EasyList
+https://justdomains.github.io/blocklists/lists/easylist-justdomains.txt
+# EasyPrivacy
+https://justdomains.github.io/blocklists/lists/easyprivacy-justdomains.txt
+# AdGuard Filter
+https://justdomains.github.io/blocklists/lists/adguarddns-justdomains.txt
+# coin miners
+https://justdomains.github.io/blocklists/lists/nocoin-justdomains.txt
+# YouTube ads
+https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt
