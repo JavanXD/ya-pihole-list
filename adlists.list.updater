@@ -20,3 +20,15 @@ https://justdomains.github.io/blocklists/lists/nocoin-justdomains.txt
 https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt
 # Spotify ads
 https://raw.githubusercontent.com/dfederlein/dnsbl-dfed/master/spotifyads.txt
+# Spam 404
+https://raw.githubusercontent.com/hectorm/hmirror/master/data/spam404.com/list.txt
+# AdAway
+https://raw.githubusercontent.com/hectorm/hmirror/master/data/adaway.org/list.txt
+# Disconnect.me SimpleAd
+https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+# Disconnect.me SimpleTracking
+https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+# malwaredomains
+https://mirror1.malwaredomains.com/files/justdomains
+# StevenBlack/hosts
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
