@@ -12,6 +12,7 @@ adListSource="https://raw.githubusercontent.com/JavanXD/ya-pihole-list/master/ad
 adListFile="/home/pi/adlists.list.updater"
 tmpFile="/home/pi/adlists.list.updater.tmp"
 table="adlist"
+timestamp="$(date --utc +'%s')"
 
 # we need to be root to have write access to gravity.db
 if [ "$EUID" -ne 0 ]
@@ -32,7 +33,7 @@ echo "Info: Updating Pi-hole"
 pihole updatePihole
 
 # update gravity table (create or migrate if not exists yet)
-echo "Info: Create or migrate gravity table if not exists yet"
+echo "Info: Create or migrate gravity.db table if not exists yet"
 pihole updateGravity
 
 # download latest adlists list
@@ -45,6 +46,13 @@ if [ -e "${adListFile}" ]; then
   # Store adlist domains in database
   echo "Info: Adding content of ${adListFile} into gravity database"
 
+  # Get MAX(id) when INSERTing into this table
+  rowid="$(sqlite3 "${gravityDBfile}" "SELECT MAX(id) FROM ${table};")"
+  if [[ -z "$rowid" ]]; then
+    rowid=0
+  fi
+  rowid=$((rowid+1))
+
   # Loop over all domains in ${adListFile} file
   # Read file line by line
   grep -v '^ *#' < "${adListFile}" | while IFS= read -r domain
@@ -52,8 +60,8 @@ if [ -e "${adListFile}" ]; then
     # Only add non-empty lines
     if [[ -n "${domain}" ]]; then
       # Adlist table format
-      echo "\"${domain}\",1,${timestamp},${timestamp},\"Added by Updater\"" >> "${tmpFile}"
-      rowid+=1
+      echo "${rowid},\"${domain}\",1,${timestamp},${timestamp},\"Added by Updater\"" >> "${tmpFile}"
+      rowid=$((rowid+1))
     fi
   done
 
@@ -63,14 +71,17 @@ if [ -e "${adListFile}" ]; then
   output=$( { printf ".timeout 30000\\n.mode csv\\n.import \"%s\" %s\\n" "${tmpFile}" "${table}" | sqlite3 "${gravityDBfile}"; } 2>&1 )
   status="$?"
 
-  # clear file
-  echo -n "" > ${tmpFile}
+  # delete temporary file
+  rm ${tmpFile}
 
   if [[ "${status}" -ne 0 ]]; then
-    echo "Warning: Some warnings in table ${table} in database ${gravityDBfile}\\n  ${output}"
+    echo "Warning: Some warnings in table ${table} in database ${gravityDBfile}:"
+    echo "${output}"
+  else
+    echo "Info: Successfull inserted the adlists list"
   fi
 fi
 
 # update gravity table (activate the changes to the gravity.db)
-echo "Info: Update Gravity because of the changes to the gravity.db"
+echo "Info: Caling 'pihole -g' because of the changes to the gravity.db"
 pihole updateGravity
