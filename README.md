@@ -48,6 +48,7 @@ sudo sh adlists-updater.sh
 
 ### Helpful links
 * https://filterlists.com/ - A great search engine to find suitable blocklists.
+* https://firebog.net/ - A collection of good blocklists. 
 
 ### License
 Each converted / modified list file is licensed under the same license as the original list.
