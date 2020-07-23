@@ -1,6 +1,6 @@
 # mobile in-app ads (android, iOS)
 https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/mobile.txt
-# SmartTVs Ads (HbbTV und co.)
+# SmartTVs Ads (HbbTV & co.)
 https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/smarttv.txt
 # Adobe Updates (Photoshop & co.)
 https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/adobeblock.txt
@@ -14,8 +14,6 @@ https://justdomains.github.io/blocklists/lists/easylist-justdomains.txt
 https://justdomains.github.io/blocklists/lists/easyprivacy-justdomains.txt
 # AdGuard Filter
 https://justdomains.github.io/blocklists/lists/adguarddns-justdomains.txt
-# coin miners
-https://justdomains.github.io/blocklists/lists/nocoin-justdomains.txt
 # YouTube ads
 https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt
 # Spotify ads
@@ -28,7 +26,15 @@ https://raw.githubusercontent.com/hectorm/hmirror/master/data/adaway.org/list.tx
 https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
 # Disconnect.me SimpleTracking
 https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
-# malwaredomains
-https://mirror1.malwaredomains.com/files/justdomains
+# ads
+https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts
 # StevenBlack/hosts
 https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+# coin miners
+https://justdomains.github.io/blocklists/lists/nocoin-justdomains.txt
+# malicious
+https://urlhaus.abuse.ch/downloads/hostfile/
+# malicious
+https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
+# malwaredomains
+https://mirror1.malwaredomains.com/files/justdomains
