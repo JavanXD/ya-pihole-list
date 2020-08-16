@@ -24,13 +24,23 @@ fi
 command -v pihole >/dev/null 2>&1 || { \
     echo >&2 "Error: You must run this on a pihole!"; exit 1; }
 
-# update raspbian
-echo "Info: Updating Raspbian"
-apt-get update && apt-get dist-upgrade -y
+# auto update arguments
+if [ -z "$1" ] ; then
+  echo "Info: No argument for enabling auto raspbian update. Default is 'no update'."
+  update=0
+else
+  update=$1
+fi
 
-# update pihole
-echo "Info: Updating Pi-hole"
-pihole updatePihole
+if [ $update -eq 1 ] ; then
+  # update raspbian
+  echo "Info: Updating Raspbian"
+  apt-get update && apt-get dist-upgrade -y
+
+  # update pihole
+  echo "Info: Updating Pi-hole"
+  pihole updatePihole
+fi
 
 # update gravity table (create or migrate if not exists yet)
 echo "Info: Create or migrate gravity.db table if not exists yet"
