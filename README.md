@@ -16,11 +16,11 @@ sudo sh adlists-updater.sh
 ```
 
 
-## How to add your own adlists
+## How to append your own adlists
 
 1. Fork this project.
-2. Add your own blocklist to the ``adlists.list.updater`` file.
-3. Change the ``adListSource`` to your custom blocklist collection. 
+2. Add your own blocklist to the ``adlists.list.updater`` file. 
+3. Change the ``adListSource`` variable in the `adlists-updater.sh` file to your custom blocklist collection. 
 
 
 ## Updating your adlists automatically
