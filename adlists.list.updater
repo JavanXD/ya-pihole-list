@@ -38,3 +38,7 @@ https://urlhaus.abuse.ch/downloads/hostfile/
 https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
 # malwaredomains
 https://mirror1.malwaredomains.com/files/justdomains
+# phishing (last 30 days)
+https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe
+# spam mails (phishing)
+https://github.com/RPiList/specials/blob/master/Blocklisten/spam.mails
