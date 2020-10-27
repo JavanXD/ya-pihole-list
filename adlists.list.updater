@@ -1,13 +1,7 @@
 # mobile in-app ads (android, iOS)
 https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/mobile.txt
-# SmartTVs Ads (HbbTV & co.)
-https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/smarttv.txt
 # Adobe Updates (Photoshop & co.)
 https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/adobeblock.txt
-# Nintendo System-Updates (3DS/Wii U/Switch)
-https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/nintendoblock.txt
-# windows microsoft tracking
-https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/nomsdata.txt
 # EasyList
 https://justdomains.github.io/blocklists/lists/easylist-justdomains.txt
 # EasyPrivacy
@@ -42,3 +36,7 @@ https://mirror1.malwaredomains.com/files/justdomains
 https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe
 # spam mails (phishing)
 https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/spam.mails
+# Ads, (Mobile) App Ads, Phishing, Malvertising
+https://dbl.oisd.nl/
+# windows spy
+https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/dnscrypt/spy.txt
