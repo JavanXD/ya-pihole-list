@@ -8,8 +8,6 @@ https://justdomains.github.io/blocklists/lists/easylist-justdomains.txt
 https://justdomains.github.io/blocklists/lists/easyprivacy-justdomains.txt
 # AdGuard Filter
 https://justdomains.github.io/blocklists/lists/adguarddns-justdomains.txt
-# YouTube ads
-https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt
 # Spotify ads
 https://raw.githubusercontent.com/dfederlein/dnsbl-dfed/master/spotifyads.txt
 # Spam 404
@@ -20,17 +18,17 @@ https://raw.githubusercontent.com/hectorm/hmirror/master/data/adaway.org/list.tx
 https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
 # Disconnect.me SimpleTracking
 https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
-# ads
+# hostsVN ads
 https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts
 # StevenBlack/hosts
 https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
-# coin miners
+# block coin miners
 https://justdomains.github.io/blocklists/lists/nocoin-justdomains.txt
-# malicious
+# malicious domains
 https://urlhaus.abuse.ch/downloads/hostfile/
-# malicious
+# malicious domains
 https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
-# malwaredomains
+# malware domains
 https://mirror1.malwaredomains.com/files/justdomains
 # phishing (last 30 days)
 https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe
@@ -38,5 +36,5 @@ https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-A
 https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/spam.mails
 # Ads, (Mobile) App Ads, Phishing, Malvertising
 https://dbl.oisd.nl/
-# windows spy
+# windows telemetry
 https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/dnscrypt/spy.txt
