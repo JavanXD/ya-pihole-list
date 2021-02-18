@@ -28,8 +28,6 @@ https://justdomains.github.io/blocklists/lists/nocoin-justdomains.txt
 https://urlhaus.abuse.ch/downloads/hostfile/
 # malicious domains
 https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
-# malware domains
-https://mirror1.malwaredomains.com/files/justdomains
 # phishing (last 30 days)
 https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe
 # spam mails (phishing)
