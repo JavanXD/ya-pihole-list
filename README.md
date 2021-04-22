@@ -45,7 +45,9 @@ Add the argument `1` to your `sudo sh adlists-updater.sh 1` call.
 	```
 
 ## Screenshots
-![Pi-hole 5 Adlists](./docs/Pi-hole%205%20Adlists.png)
+<img width="900" alt="grafik" src="https://user-images.githubusercontent.com/4342160/115691780-a5de6180-a35e-11eb-99d9-256b86d7b921.png">
+
+<img width="900" alt="grafik" src="https://user-images.githubusercontent.com/4342160/115691582-7d566780-a35e-11eb-93e2-59c9c5fcbd65.png">
 
 
 ## Other
