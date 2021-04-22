@@ -70,7 +70,7 @@ if [ -e "${adListFile}" ]; then
     # Only add non-empty lines
     if [[ -n "${domain}" ]]; then
       # Adlist table format
-      echo "${rowid},\"${domain}\",1,${timestamp},${timestamp},\"Added by Updater\"" >> "${tmpFile}"
+      echo "${rowid},\"${domain}\",1,${timestamp},${timestamp},\"Added by Updater\",,0,0,0" >> "${tmpFile}"
       rowid=$((rowid+1))
     fi
   done
