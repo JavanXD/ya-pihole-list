@@ -1,40 +1,34 @@
-# Akamaru has no public repositories at the moment
-# mobile in-app ads (android, iOS)
-#https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/mobile.txt
-# Adobe Updates (Photoshop & co.)
-#https://raw.githubusercontent.com/Akamaru/Pi-Hole-Lists/master/adobeblock.txt
-
 # EasyList
 https://justdomains.github.io/blocklists/lists/easylist-justdomains.txt
 # EasyPrivacy
 https://justdomains.github.io/blocklists/lists/easyprivacy-justdomains.txt
 # AdGuard Filter
 https://justdomains.github.io/blocklists/lists/adguarddns-justdomains.txt
+# block coin miners
+https://justdomains.github.io/blocklists/lists/nocoin-justdomains.txt
 # Spotify ads
 https://raw.githubusercontent.com/dfederlein/dnsbl-dfed/master/spotifyads.txt
 # Spam 404
 https://raw.githubusercontent.com/hectorm/hmirror/master/data/spam404.com/list.txt
 # AdAway
 https://raw.githubusercontent.com/hectorm/hmirror/master/data/adaway.org/list.txt
-# Disconnect.me SimpleAd
-https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
-# Disconnect.me SimpleTracking
-https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
-# hostsVN ads
-https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts
-# StevenBlack/hosts
-https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
-# block coin miners
-https://justdomains.github.io/blocklists/lists/nocoin-justdomains.txt
-# malicious domains
-https://urlhaus.abuse.ch/downloads/hostfile/
-# malicious domains
-https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
 # phishing (last 30 days)
 https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/Phishing-Angriffe
 # spam mails (phishing)
 https://raw.githubusercontent.com/RPiList/specials/master/Blocklisten/spam.mails
-# Ads, (Mobile) App Ads, Phishing, Malvertising
-https://dbl.oisd.nl/
 # windows telemetry
 https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/dnscrypt/spy.txt
+# AdGuard mobile in-app ads 
+https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
+# StevenBlack/hosts (adware + malware)
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+# Disconnect.me SimpleAd
+https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+# Disconnect.me SimpleTracking
+https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+# abuse.ch malicious domains + malware
+https://urlhaus.abuse.ch/downloads/hostfile/
+# osint.digitalside.it malicious domains + malware
+https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
+# Ads, Mobile Ads, Phishing, Malvertising, Malware, Spyware, Ransomware, CryptoJacking and some Telemetry, Analytics, Tracking
+https://dbl.oisd.nl/
