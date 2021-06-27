@@ -4,21 +4,21 @@
 # author  : Javan Rasokat (javan.de)
 # license : gplv3
 
-basename="pihole"
-PIHOLE_COMMAND="/usr/local/bin/${basename}"
-piholeDir="/etc/${basename}"
-gravityDBfile="${piholeDir}/gravity.db"
-adListSource="https://raw.githubusercontent.com/JavanXD/ya-pihole-list/master/adlists.list.updater"
-adListFile="/home/pi/adlists.list.updater"
-tmpFile="/home/pi/adlists.list.updater.tmp"
-table="adlist"
-timestamp="$(date --utc +'%s')"
-
 # we need to be root to have write access to gravity.db
 if [ "$EUID" -ne 0 ]
   then echo "Warning: Please run as root"
   exit 1
 fi
+
+basename="pihole"
+PIHOLE_COMMAND="/usr/local/bin/${basename}"
+piholeDir="/etc/${basename}"
+gravityDBfile="${piholeDir}/gravity.db"
+adListSource="https://raw.githubusercontent.com/JavanXD/ya-pihole-list/master/adlists.list.updater"
+adListFile="$HOME/adlists.list.updater"
+tmpFile="$HOME/adlists.list.updater.tmp"
+table="adlist"
+timestamp="$(date --utc +'%s')"
 
 # check if we're actually on a pihole (and a new version at that)
 command -v pihole >/dev/null 2>&1 || { \
